@@ -94,6 +94,22 @@
             background-clip: text;
         }
 
+        .hero-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-title-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+            flex-shrink: 0;
+        }
+
         .hero .tagline {
             font-size: 1.5rem;
             color: #cbd5e1;
@@ -392,7 +408,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Lumen Guard</h1>
+        <div class="hero-title">
+            <img src="images/app-icon.webp" alt="" class="hero-title-icon" aria-hidden="true">
+            <h1>Lumen Guard</h1>
+        </div>
         <p class="tagline">Professional Eye Protection for Android</p>
         <p class="description">
             A powerful screen dimmer and blue light filter designed to protect your eyes during extended screen time.
