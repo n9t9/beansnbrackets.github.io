@@ -1,0 +1,12 @@
+# Lumen Guard Website Assets
+
+*~
+*.bak
+# Backup files
+
+desktop.ini
+Thumbs.db
+# Windows
+
+.DS_Store
+# macOS

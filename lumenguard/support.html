@@ -17,8 +17,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background-attachment: fixed;
             color: #f8fafc;
             line-height: 1.6;
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -338,7 +340,7 @@
                 <div class="faq-answer">
                     <p>Installing Lumen Guard is simple:</p>
                     <ol>
-                        <li>Download Lumen Guard from the Google Play Store</li>
+                        <li>Download Lumen Guard from Google Play once it is available</li>
                         <li>Open the app after installation</li>
                         <li>Grant the "Draw over other apps" permission when prompted</li>
                         <li>Start adjusting your screen dimming and warmth levels!</li>
@@ -355,9 +357,11 @@
                     <p>Lumen Guard requires the following permissions:</p>
                     <ul>
                         <li><strong>Draw over other apps (SYSTEM_ALERT_WINDOW)</strong> - Required to display the dimming overlay on your screen</li>
-                        <li><strong>Foreground Service</strong> - Allows the app to keep running in the background to maintain your settings</li>
+                        <li><strong>Foreground Service</strong> - Keeps an active filter overlay available while you use other apps</li>
+                        <li><strong>Notifications (optional)</strong> - Enables filter status updates and optional reminders; the filter still works when notifications are off</li>
+                        <li><strong>Internet and Google Play Billing</strong> - Support Google Mobile Ads in the free version and an optional premium purchase</li>
                     </ul>
-                    <p>These permissions are used exclusively for the app's core functionality. We do not collect or transmit any data. See our <a href="privacy.html" style="color: #38bdf8;">Privacy Policy</a> for more details.</p>
+                    <p>“Display over other apps” is required for the filter itself. Advertising and purchase data are handled by Google as described in our <a href="privacy.html" style="color: #38bdf8;">Privacy Policy</a>.</p>
                 </div>
             </div>
 
@@ -417,17 +421,12 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What is "Shake to Toggle"?</div>
+                <div class="faq-question">Do I need to allow notifications?</div>
                 <div class="faq-answer">
-                    <p>"Shake to Toggle" is a quick gesture control that lets you enable or disable the screen filter by shaking your device.</p>
-                    <p>To enable it:</p>
-                    <ol>
-                        <li>Go to Settings</li>
-                        <li>Toggle "Shake to Toggle" on</li>
-                        <li>Give your phone a firm shake to toggle the filter on/off</li>
-                    </ol>
+                    <p>No. Notifications are optional. The filter and schedules still work if you leave them off, but you will not receive filter status updates or night reminders.</p>
+                    <p>You can change this later from Android's app notification settings or the App Notifications item in Lumen Guard's Settings tab.</p>
                     <div class="tips-box">
-                        <strong>💡 Tip:</strong> This is great when you need to quickly disable the filter to view colors accurately, then shake again to re-enable it.
+                        <strong>💡 Tip:</strong> If you previously denied the notification request, use the app's Open settings button to manage it directly in Android settings.
                     </div>
                 </div>
             </div>
@@ -469,7 +468,7 @@
                         <li>Go to your device Settings</li>
                         <li>Navigate to Battery or Battery Optimization</li>
                         <li>Find Lumen Guard and set it to "Don't optimize" or "Unrestricted"</li>
-                        <li>Enable "Auto-Start on Boot" in Lumen Guard settings</li>
+                        <li>Return to Lumen Guard and confirm the schedule is still enabled</li>
                     </ol>
                     <div class="warning-box">
                         <strong>⚠️ Note:</strong> Different manufacturers have different battery optimization menus. Search for "battery optimization" in your device settings.
@@ -483,8 +482,8 @@
                     <p>Currently, Lumen Guard applies the filter system-wide. If you need to temporarily disable it for specific tasks:</p>
                     <ul>
                         <li>Use the quick toggle on the Home screen</li>
-                        <li>Enable "Shake to Toggle" for quick gesture control</li>
-                        <li>Pull down your notification shade and tap the Lumen Guard notification to quickly toggle</li>
+                        <li>Use the optional floating widget if you have enabled it</li>
+                        <li>Use the status notification when notifications are enabled</li>
                     </ul>
                     <div class="tips-box">
                         <strong>💡 Future Feature:</strong> Per-app filtering is planned for a future update!
@@ -498,8 +497,8 @@
                     <p>Lumen Guard is designed to be lightweight and battery-efficient. However, if you notice increased battery drain:</p>
                     <ul>
                         <li>Make sure you're running the latest version from Google Play</li>
-                        <li>Reduce the frequency of shake detection if you don't use that feature</li>
-                        <li>The overlay itself uses minimal resources (less than 1% typically)</li>
+                        <li>Turn the filter off when you do not need it</li>
+                        <li>Use Android's battery settings to check which apps are consuming power on your device</li>
                     </ul>
                     <p>If battery drain persists, please contact support with your device model and Android version.</p>
                 </div>
@@ -529,10 +528,9 @@
                     <p>Premium unlocks the following features:</p>
                     <ul>
                         <li>✨ Unlimited Custom Scenes - Save as many configurations as you want</li>
-                        <li>✨ Advanced Scheduling Options - Multiple schedules, weekday-specific settings</li>
-                        <li>✨ Priority Email Support - Get faster responses to your questions</li>
-                        <li>✨ Early Access to New Features - Try new features before they're released to everyone</li>
-                        <li>✨ Support Development - Help us continue improving Lumen Guard</li>
+                        <li>✨ Unlimited Schedules - Set up as many routines as you need</li>
+                        <li>✨ Floating Widget - Quick on-screen filter controls</li>
+                        <li>✨ Ad-Free Experience - No in-app advertising placements</li>
                     </ul>
                 </div>
             </div>
@@ -554,14 +552,14 @@
             <div class="faq-item">
                 <div class="faq-question">Can I get a refund?</div>
                 <div class="faq-answer">
-                    <p>Refunds are handled through Google Play Store. You can request a refund within 48 hours of purchase:</p>
+                    <p>Refunds are handled according to Google Play's current refund policies:</p>
                     <ol>
                         <li>Open the Google Play Store app</li>
                         <li>Tap Menu → Account → Purchase history</li>
                         <li>Find Lumen Guard Premium</li>
                         <li>Tap "Request a refund"</li>
                     </ol>
-                    <p>For refund requests after 48 hours, please contact us at <a href="mailto:beansnbrackets@gmail.com" style="color: #38bdf8;">beansnbrackets@gmail.com</a></p>
+                    <p>For help with a purchase, contact us at <a href="mailto:beansnbrackets@gmail.com" style="color: #38bdf8;">beansnbrackets@gmail.com</a>.</p>
                 </div>
             </div>
         </section>
@@ -576,7 +574,7 @@
                     <div class="contact-icon">📧</div>
                     <h3>Email Support</h3>
                     <p style="color: #94a3b8; margin-bottom: 0.5rem;">Get help via email</p>
-                    <a href="mailto:support@beansnbrackets.com">support@beansnbrackets.com</a>
+                    <a href="mailto:beansnbrackets@gmail.com">beansnbrackets@gmail.com</a>
                 </div>
 
                 <div class="contact-card">
@@ -588,8 +586,7 @@
             </div>
 
             <p style="color: #94a3b8; margin-top: 2rem; font-size: 0.9rem;">
-                Response time: Usually within 24-48 hours<br>
-                Premium users receive priority support
+                We aim to respond as soon as we can.
             </p>
         </section>
     </div>

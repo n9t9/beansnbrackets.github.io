@@ -11,8 +11,10 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background-attachment: fixed;
     color: #f8fafc;
     line-height: 1.6;
+    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -35,6 +37,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    gap: 1rem;
 }
 
 .logo {
@@ -59,6 +62,8 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -70,6 +75,12 @@ nav a {
 
 nav a:hover {
     color: #38bdf8;
+}
+
+a:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 /* Hero Section */
@@ -123,6 +134,23 @@ nav a:hover {
     max-width: 700px;
     margin: 0 auto 3rem;
     line-height: 1.8;
+}
+
+.hero-note {
+    max-width: 650px;
+    margin: 1.25rem auto 0;
+    color: #64748b;
+    font-size: 0.86rem;
+}
+
+.eyebrow {
+    color: #7dd3fc;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .cta-buttons {
@@ -327,13 +355,51 @@ nav a:hover {
     margin-top: 2rem;
 }
 
-.screenshot-placeholder {
+.screenshot-card {
+    margin: 0;
+    overflow: hidden;
     background: rgba(30, 41, 59, 0.8);
-    border: 2px dashed rgba(56, 189, 248, 0.3);
-    border-radius: 12px;
-    padding: 4rem 2rem;
-    color: #64748b;
-    font-style: italic;
+    border: 1px solid rgba(56, 189, 248, 0.24);
+    border-radius: 16px;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.55);
+}
+
+.screenshot-card img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: top;
+    background: #0f172a;
+}
+
+.screenshot-card figcaption {
+    padding: 1.15rem 1.2rem 1.3rem;
+}
+
+.screenshot-card h3 {
+    color: #e2e8f0;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.screenshot-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.availability-details {
+    margin-top: 1.4rem !important;
+    margin-bottom: 0 !important;
+    color: #64748b !important;
+    font-size: 0.9rem !important;
 }
 
 /* Download Section */
@@ -434,11 +500,46 @@ footer {
         font-size: 0.9rem;
     }
 
+    nav {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+
+    .screenshot-card img {
+        height: 390px;
+    }
+
     .features h2,
     .premium-section h2,
     .screenshots h2,
     .download-section h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.65rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 0.75rem 1rem;
+    }
+
+    .hero-title {
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        white-space: nowrap;
     }
 }
 

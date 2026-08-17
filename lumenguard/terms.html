@@ -17,8 +17,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background-attachment: fixed;
             color: #f8fafc;
             line-height: 1.6;
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -248,7 +250,7 @@
     <div class="container">
         <div class="header-section">
             <h1>Terms of Service</h1>
-            <p class="last-updated">Last Updated: February 16, 2026</p>
+            <p class="last-updated">Last Updated: August 16, 2026</p>
         </div>
 
         <div class="content-section">
@@ -266,15 +268,14 @@
 
             <h2>Description of Service</h2>
             <p>
-                Lumen Guard is a screen dimming and blue light filtering application designed to help protect your eyes
-                during extended screen use. The App provides:
+                Lumen Guard is a screen dimming and colour-warmth application for Android. The App provides:
             </p>
             <ul>
                 <li>Adjustable screen dimming beyond system limits</li>
-                <li>Blue light filter with customizable warmth levels</li>
+                <li>Customizable warmth levels</li>
                 <li>Custom scenes for different use cases</li>
-                <li>Scheduling functionality for automated protection</li>
-                <li>Shake to toggle feature for quick access</li>
+                <li>Scheduling functionality for automatic filter changes</li>
+                <li>An optional floating widget for quick access</li>
             </ul>
 
             <h2>Use of Our Service</h2>
@@ -299,8 +300,10 @@
             </p>
             <ul>
                 <li><strong>Draw Over Other Apps:</strong> Required to display the dimming overlay</li>
-                <li><strong>Foreground Service:</strong> Required to maintain continuous protection</li>
-                <li><strong>Internet (Free Version):</strong> Required for displaying advertisements</li>
+                <li><strong>Foreground Service:</strong> Required to keep an active overlay available while you use other apps</li>
+                <li><strong>Notifications:</strong> Optional for filter status and optional reminders; core filtering still works if notifications are off</li>
+                <li><strong>Internet and Google Play Billing:</strong> Used for Google Mobile Ads in the free version and for an optional premium purchase</li>
+                <li><strong>Boot recovery:</strong> Used to restore enabled schedules after device restart</li>
             </ul>
             <p>
                 By granting these permissions, you acknowledge that these are necessary for the App's core functionality
@@ -313,9 +316,9 @@
                 The free version of Lumen Guard includes advertisements and has certain feature limitations:
             </p>
             <ul>
-                <li>Limited number of custom scenes</li>
-                <li>Limited scheduling options</li>
-                <li>Advertisements displayed within the app</li>
+                <li>Core dimming and warmth controls</li>
+                <li>A free preset scene</li>
+                <li>Banner advertisements and optional rewarded advertisements</li>
             </ul>
 
             <h3>Premium Version</h3>
@@ -326,8 +329,7 @@
                 <li>Ad-free experience</li>
                 <li>Unlimited custom scenes</li>
                 <li>Unlimited schedules</li>
-                <li>Priority support via email</li>
-                <li>All future premium features</li>
+                <li>Floating widget access</li>
             </ul>
 
             <h2>Premium Features and Payments</h2>
@@ -368,9 +370,9 @@
                 <li>Warranties that defects will be corrected</li>
             </ul>
             <p>
-                <strong>Eye Health Disclaimer:</strong> While Lumen Guard is designed to reduce eye strain, it is not
-                a medical device and should not be considered a substitute for professional eye care. Consult an
-                eye care professional for any vision-related concerns.
+                <strong>Display Disclaimer:</strong> Lumen Guard changes the appearance of the display. It is not a
+                medical device and is not a substitute for professional eye care. Consult an eye care professional
+                for vision-related concerns.
             </p>
 
             <h2>Limitation of Liability</h2>
@@ -410,11 +412,19 @@
                 we handle information and data.
             </p>
 
-            <h2>Third-Party Services</h2>
+            <h2>Advertising and Third-Party Services</h2>
             <p>
-                The free version of Lumen Guard displays advertisements through third-party advertising networks.
-                These services are governed by their own terms and privacy policies. We are not responsible for
-                the content, privacy policies, or practices of any third-party advertising services.
+                The free version currently uses Google Mobile Ads for banner ads and optional rewarded ads. Google
+                services are governed by their own terms and privacy policies. Please review our
+                <a href="privacy.html">Privacy Policy</a> and Google's applicable policies for more information.
+            </p>
+
+            <h3>Optional Rewarded Ads</h3>
+            <p>
+                A rewarded ad is never required to use Lumen Guard's core filter controls. Before each rewarded ad,
+                the App describes the specific temporary in-app reward. You choose whether to watch the ad; declining
+                or closing it does not prevent normal use of the App. A promised reward is granted only after the
+                reward criteria for that ad are completed.
             </p>
 
             <h2>Termination</h2>
