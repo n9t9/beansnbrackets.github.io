@@ -525,6 +525,7 @@ footer {
     nav {
         flex-direction: column;
         align-items: center;
+        padding: 0 1rem;
         gap: 0.65rem;
     }
 
@@ -539,7 +540,60 @@ footer {
 
     .hero h1 {
         font-size: 2.25rem;
-        white-space: nowrap;
+        line-height: 1.1;
+    }
+
+    .hero {
+        padding: 4rem 1.25rem;
+    }
+
+    .hero-title-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cta-buttons {
+        display: grid;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        justify-content: center;
+        padding: 0.95rem 1.25rem;
+    }
+
+    .features,
+    .screenshots {
+        margin: 2.5rem auto;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .premium-section,
+    .download-section {
+        margin: 2.5rem 1rem;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .features-grid,
+    .premium-features,
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card,
+    .premium-item {
+        padding: 1.25rem;
+    }
+
+    .screenshot-card img {
+        height: min(150vw, 560px);
+    }
+
+    footer {
+        padding: 2.5rem 1.25rem;
     }
 }
 

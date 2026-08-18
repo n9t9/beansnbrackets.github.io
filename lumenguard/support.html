@@ -140,8 +140,13 @@
         }
 
         .faq-question::before {
-            content: "❓";
-            font-size: 1.2rem;
+            content: "";
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: #38bdf8;
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
+            flex: 0 0 auto;
         }
 
         .faq-answer {
@@ -207,14 +212,25 @@
             background: rgba(30, 41, 59, 0.8);
         }
 
-        .contact-card:hover .contact-icon {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(129, 140, 248, 0.3) 100%);
-            transform: scale(1.05);
+        .contact-card:hover .contact-label {
+            border-color: rgba(56, 189, 248, 0.7);
+            color: #e0f2fe;
         }
 
-        .contact-icon {
-            font-size: 2.5rem;
+        .contact-label {
+            display: inline-flex;
+            align-items: center;
+            min-height: 1.8rem;
+            padding: 0.2rem 0.55rem;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 999px;
+            color: #7dd3fc;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             margin-bottom: 1rem;
+            transition: border-color 0.3s ease, color 0.3s ease;
         }
 
         .contact-card h3 {
@@ -308,6 +324,66 @@
                 font-size: 0.9rem;
             }
         }
+
+        @media (max-width: 560px) {
+            nav {
+                flex-direction: column;
+                padding: 0 1rem;
+                gap: 0.7rem;
+            }
+
+            nav ul {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .container {
+                padding: 2.5rem 1rem;
+            }
+
+            .header-section {
+                margin-bottom: 2.5rem;
+            }
+
+            .faq-item,
+            .contact-section {
+                padding: 1.25rem;
+            }
+
+            .faq-question {
+                font-size: 1.1rem;
+                gap: 0.65rem;
+            }
+
+            .faq-answer ul,
+            .faq-answer ol {
+                margin-left: 1.25rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            footer {
+                padding: 2.5rem 1rem;
+            }
+
+            .footer-links {
+                gap: 0.75rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -340,13 +416,13 @@
                 <div class="faq-answer">
                     <p>Installing Lumen Guard is simple:</p>
                     <ol>
-                        <li>Download Lumen Guard from Google Play once it is available</li>
+                        <li>Download Lumen Guard from <a href="https://play.google.com/store/apps/details?id=com.beansnbrackets.lumenguard&amp;hl=en-US" style="color: #38bdf8;" target="_blank" rel="noopener">Google Play</a></li>
                         <li>Open the app after installation</li>
                         <li>Grant the "Draw over other apps" permission when prompted</li>
                         <li>Start adjusting your screen dimming and warmth levels!</li>
                     </ol>
                     <div class="tips-box">
-                        <strong>💡 Tip:</strong> The overlay permission is essential for Lumen Guard to work. Without it, the app cannot display the dimming filter over other applications.
+                        <strong>Tip:</strong> The overlay permission is essential for Lumen Guard to work. Without it, the app cannot display the dimming filter over other applications.
                     </div>
                 </div>
             </div>
@@ -400,7 +476,7 @@
                         <li>Give your scene a name and save</li>
                     </ol>
                     <div class="tips-box">
-                        <strong>💡 Tip:</strong> Custom Scenes are a Premium feature. Free users have access to default scenes.
+                        <strong>Tip:</strong> Custom Scenes are a Premium feature. Free users have access to default scenes.
                     </div>
                 </div>
             </div>
@@ -426,7 +502,7 @@
                     <p>No. Notifications are optional. The filter and schedules still work if you leave them off, but you will not receive filter status updates or night reminders.</p>
                     <p>You can change this later from Android's app notification settings or the App Notifications item in Lumen Guard's Settings tab.</p>
                     <div class="tips-box">
-                        <strong>💡 Tip:</strong> If you previously denied the notification request, use the app's Open settings button to manage it directly in Android settings.
+                        <strong>Tip:</strong> If you previously denied the notification request, use the app's Open settings button to manage it directly in Android settings.
                     </div>
                 </div>
             </div>
@@ -471,7 +547,7 @@
                         <li>Return to Lumen Guard and confirm the schedule is still enabled</li>
                     </ol>
                     <div class="warning-box">
-                        <strong>⚠️ Note:</strong> Different manufacturers have different battery optimization menus. Search for "battery optimization" in your device settings.
+                        <strong>Note:</strong> Different manufacturers have different battery optimization menus. Search for "battery optimization" in your device settings.
                     </div>
                 </div>
             </div>
@@ -486,7 +562,7 @@
                         <li>Use the status notification when notifications are enabled</li>
                     </ul>
                     <div class="tips-box">
-                        <strong>💡 Future Feature:</strong> Per-app filtering is planned for a future update!
+                        <strong>Availability:</strong> Per-app filtering is planned for a future update.
                     </div>
                 </div>
             </div>
@@ -527,10 +603,10 @@
                 <div class="faq-answer">
                     <p>Premium unlocks the following features:</p>
                     <ul>
-                        <li>✨ Unlimited Custom Scenes - Save as many configurations as you want</li>
-                        <li>✨ Unlimited Schedules - Set up as many routines as you need</li>
-                        <li>✨ Floating Widget - Quick on-screen filter controls</li>
-                        <li>✨ Ad-Free Experience - No in-app advertising placements</li>
+                        <li>Unlimited Custom Scenes - Save as many configurations as you want</li>
+                        <li>Unlimited Schedules - Set up as many routines as you need</li>
+                        <li>Floating Widget - Quick on-screen filter controls</li>
+                        <li>Ad-Free Experience - No in-app advertising placements</li>
                     </ul>
                 </div>
             </div>
@@ -571,17 +647,17 @@
 
             <div class="contact-methods">
                 <div class="contact-card">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-label">Email</div>
                     <h3>Email Support</h3>
                     <p style="color: #94a3b8; margin-bottom: 0.5rem;">Get help via email</p>
                     <a href="mailto:beansnbrackets@gmail.com">beansnbrackets@gmail.com</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="contact-icon">⭐</div>
+                    <div class="contact-label">Google Play</div>
                     <h3>Rate Us</h3>
                     <p style="color: #94a3b8; margin-bottom: 0.5rem;">Love Lumen Guard?</p>
-                    <a href="https://play.google.com/store/apps">Leave a Review</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.beansnbrackets.lumenguard&amp;hl=en-US" target="_blank" rel="noopener">Leave a Review</a>
                 </div>
             </div>
 
