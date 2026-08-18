@@ -90,15 +90,45 @@
     font-weight: 400;
 }
 
-.app-status {
+.app-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.app-actions a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 6px;
-    color: #38bdf8;
     font-size: 0.875rem;
     font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.app-details {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+}
+
+.app-details:hover,
+.app-details:focus-visible {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.app-download {
+    background: #38bdf8;
+    border: 1px solid #38bdf8;
+    color: #0f172a;
+}
+
+.app-download:hover,
+.app-download:focus-visible {
+    background: #7dd3fc;
+    border-color: #7dd3fc;
+    color: #0f172a;
 }
 
 .app-features {
